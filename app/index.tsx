@@ -31,7 +31,7 @@ export default function HomeScreen() {
     const [pronostico, setPronostico] = useState<DiaClima[]>([]);
     const [indiceDia, setIndiceDia] = useState(1);
     const [cargando, setCargando] = useState(true);
-
+    
     useEffect(() => {
         fetchWeatherData();
     }, []);
