@@ -22,13 +22,12 @@ export const styles = StyleSheet.create({
     },
     ContenedorDatos: { 
         backgroundColor: "white", 
-        width: "88%", 
-        height: "90%", 
-        padding: 20, 
-        borderRadius: 40, 
+        width: "100%", 
+        height: "100%", 
+        padding: 30, 
         alignItems: "center", 
-        justifyContent: "space-between", 
-        elevation: 8 
+        gap: 35 
+  
     },
     ContenedorNavegacion: { 
         flexDirection: "row", 
@@ -43,36 +42,39 @@ export const styles = StyleSheet.create({
     },
     textoFechaPrincipal: { 
         fontWeight: 'bold', 
-        fontSize: 18 
+        fontSize: 25 
     },
     textoNavChico: { 
-        fontSize: 12, 
+        fontSize: 20, 
         fontWeight: '500', 
         opacity: 0.3 
     },
+    ContenedorCiudad:{
+        padding: 20
+
+    },
     TextoCiudad: { 
-        fontSize: 24, 
+        fontSize: 40, 
         fontWeight: '900', 
         letterSpacing: 1 
     },
     mainImage: { 
-        width: 200, 
-        height: 200 
+        width: 300, 
+        height: 300 
     },
     ContenedorDatosAdicionales: { 
         alignSelf: "flex-start", 
-        gap: 15, 
-        paddingLeft: 10 
+        gap: 10,  
     },
     ContenedorPrincipalDelPronostico: { width: '100%'},
     ContenedorPronostico: { flexDirection: "row", width: "100%", alignItems: 'baseline' },
-    ContenedorDeTextoPronostico: { flexDirection: 'row', width: '100%', marginTop: -5 },
+    ContenedorDeTextoPronostico: { flexDirection: 'row', width: '100%' },
     ContenedorDeTempLateral: { flex: 1, alignItems: "center" },
     ContenedorDeTempCentral: { flex: 2, alignItems: 'center' },
     ContenedorDeTextoLateral: { flex: 1, alignItems: "center" },
     ContenedorDeTextoCentral: { flex: 2, alignItems: 'center' },
-    TextoTempPrincipal: { fontSize: 80, fontWeight: '900', includeFontPadding: false },
-    TextoTempSecundaria: { fontSize: 24, fontWeight: 'bold', opacity: 0.2 },
+    TextoTempPrincipal: { fontSize: 80, fontWeight: '900'},
+    TextoTempSecundaria: { fontSize: 24, fontWeight: 'bold'},
     TextoCentralDeLaTemp: { fontSize: 22, fontWeight: '900', letterSpacing: 2 },
     TextoLateralDeLaTemp: { fontSize: 18, fontWeight: 'bold', opacity: 0.2 }
 });

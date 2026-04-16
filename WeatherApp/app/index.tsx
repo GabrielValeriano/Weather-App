@@ -21,13 +21,8 @@ export default function PantallaPrincipal() {
     }
 
     return (
-        <View style={styles.ContenedorMain}>
-            <StatusBar style='light' />
-            <Image blurRadius={20} source={require("../assets/images/fondo.png")} style={styles.backgroundImage} />
-            
-            <SafeAreaView style={styles.safeArea}>
-                <View style={styles.ContenedorDatos}>
-                    
+        <View style={styles.ContenedorDatos}>
+   
                     <View style={styles.ContenedorNavegacion}>
                         <TouchableOpacity onPress={acciones.irAlAnterior} style={{ opacity: datos.indiceDia === 0 ? 0.1 : 1 }}>
                             <View style={styles.Navegacion}>
@@ -45,8 +40,9 @@ export default function PantallaPrincipal() {
                             </View>
                         </TouchableOpacity>
                     </View>
-
-                    <Text style={styles.TextoCiudad}>VILLA LUGANO</Text>
+                    <View style={styles.ContenedorCiudad}>
+                        <Text style={styles.TextoCiudad}>VILLA LUGANO</Text>
+                    </View>
 
                     <Image source={obtenerImagenClima(diaActual.weatherCode)} style={styles.mainImage} resizeMode="contain" />
 
@@ -68,8 +64,7 @@ export default function PantallaPrincipal() {
                             <View style={styles.ContenedorDeTextoLateral}><Text style={styles.TextoLateralDeLaTemp}>MAX</Text></View>
                         </View>
                     </View>
-                </View>
-            </SafeAreaView>
+
         </View>
     );
 }
