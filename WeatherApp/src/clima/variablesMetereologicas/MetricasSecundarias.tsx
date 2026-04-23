@@ -41,7 +41,7 @@ const SeccionDeMetricasClima = ({  Humedad, PresionAtmosferica, VelocidadDelVien
                     <Text style={styles.ValorMetereologico}>
                         {VelocidadDelViento}
                     </Text>
-                    <Text style={styles.MedidaDeValorMetereologico}> km/h</Text>
+                    <Text style={styles.MedidaDeValorMetereologico}> m/s</Text>
                 </View>
             </View>
 

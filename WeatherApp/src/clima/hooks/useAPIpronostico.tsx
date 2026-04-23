@@ -8,7 +8,7 @@ export function useAPIpronosticoClima() {
 
     const fetchWeatherData = async () => {
         try {
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=-34.6751&longitude=-58.4621&daily=temperature_2m_max,temperature_2m_min,relative_humidity_2m_mean,temperature_2m_mean,surface_pressure_mean,wind_speed_10m_mean,weather_code&current=temperature_2m,relative_humidity_2m,surface_pressure,wind_speed_10m,weather_code&timezone=auto&past_days=1&forecast_days=2`;
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=-34.6751&longitude=-58.4621&daily=temperature_2m_max,temperature_2m_min,relative_humidity_2m_mean,temperature_2m_mean,surface_pressure_mean,wind_speed_10m_mean,weather_code&current=temperature_2m,relative_humidity_2m,surface_pressure,wind_speed_10m,weather_code&timezone=auto&past_days=1&forecast_days=2&wind_speed_unit=ms`;
             const response = await fetch(url);
             const data = await response.json();
 

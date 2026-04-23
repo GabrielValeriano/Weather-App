@@ -48,13 +48,24 @@ export const styles = StyleSheet.create({
         letterSpacing: 1 
 
     },
-    mainImage: { 
-        width: 350, 
-        height: 350 
-    },
     ContenedorDatosAdicionales: { 
         alignSelf: "flex-start", 
         gap: 4,  
+    },
+        contenedorDeValoresMetereologicos:{
+        alignItems: "baseline",
+        flexDirection: "row",
+    },
+    ValorMetereologico:{
+        fontSize: 30,
+        fontWeight: 'bold',
+
+        
+    },
+    MedidaDeValorMetereologico:{
+        fontSize:16,
+        fontWeight: 'bold',
+        opacity: 0.3
     },
     ContenedorPrincipalDelPronostico: { width: '100%'},
     ContenedorPronostico: { flexDirection: "row", width: "100%", alignItems: 'baseline' },
@@ -72,20 +83,5 @@ export const styles = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
         gap: 10
-    },
-    contenedorDeValoresMetereologicos:{
-        alignItems: "baseline",
-        flexDirection: "row",
-    },
-    ValorMetereologico:{
-        fontSize: 30,
-        fontWeight: 'bold',
-
-        
-    },
-    MedidaDeValorMetereologico:{
-        fontSize:16,
-        fontWeight: 'bold',
-        opacity: 0.3
     }
 });
