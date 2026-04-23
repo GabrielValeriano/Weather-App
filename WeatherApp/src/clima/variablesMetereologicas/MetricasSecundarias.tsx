@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from "react-native";
 import { Droplet, Gauge, Wind } from 'lucide-react-native';
 import { styles } from "@/src/clima/estilos/estilosDelIndex";
+import { FaRegCircle } from "react-icons/fa";
 
 // 1. Tipado correcto: son números, no funciones
 type Props = {
@@ -16,35 +17,35 @@ const SeccionDeMetricasClima = ({  Humedad, PresionAtmosferica, VelocidadDelVien
         <View style={styles.ContenedorDatosAdicionales}>
 
             <View style={styles.containerDeDatosMeteorologicos}>
-                <View>
-                  <Droplet size={30} color="black" />
-                  <Text style={styles.ValorMetereologico}>
-                      {Humedad}
-                  </Text>
-                  <Text> %</Text>
-                </View>
+                <Droplet size={30} color="black" />
+                <View style={styles.contenedorDeValoresMetereologicos}>
+                    <Text style={styles.ValorMetereologico}>
+                        {Humedad}
+                    </Text>
+                    <Text style={styles.MedidaDeValorMetereologico}> %</Text>
+                </View>    
             </View>
 
             <View style={styles.containerDeDatosMeteorologicos}>
-                <View>
-                  <Gauge size={30} color="black" />
-                  <Text style={styles.ValorMetereologico}>
+                <Gauge size={30} color="black" />
+                <View style={styles.contenedorDeValoresMetereologicos}>
+                    <Text style={styles.ValorMetereologico}>
                     {PresionAtmosferica}
-                  </Text>
-                  <Text> hPa</Text>
-              </View>
+                    </Text>
+                    <Text style={styles.MedidaDeValorMetereologico}> hPa</Text>
+                </View>
             </View>
 
             <View style={styles.containerDeDatosMeteorologicos}>
-                <View>
-                  <Wind size={30} color="black" />
-                  <Text style={styles.ValorMetereologico}>
-                      {VelocidadDelViento} km/h
-                  </Text>
-                  <Text> km/h</Text>
+                <Wind size={30} color="black" />
+                <View style={styles.contenedorDeValoresMetereologicos}>
+                    <Text style={styles.ValorMetereologico}>
+                        {VelocidadDelViento}
+                    </Text>
+                    <Text style={styles.MedidaDeValorMetereologico}> km/h</Text>
                 </View>
             </View>
-            
+
         </View>
     );
 };
