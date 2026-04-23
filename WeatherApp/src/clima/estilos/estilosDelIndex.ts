@@ -76,5 +76,14 @@ export const styles = StyleSheet.create({
     TextoTempPrincipal: { fontSize: 80, fontWeight: '900'},
     TextoTempSecundaria: { fontSize: 24, fontWeight: 'bold'},
     TextoCentralDeLaTemp: { fontSize: 22, fontWeight: '900', letterSpacing: 2 },
-    TextoLateralDeLaTemp: { fontSize: 18, fontWeight: 'bold', opacity: 0.2 }
+    TextoLateralDeLaTemp: { fontSize: 18, fontWeight: 'bold', opacity: 0.2 },
+    containerDeDatosMeteorologicos:{
+
+    },
+    ValorMetereologico:{
+        
+    },
+    MedidaDeValorMetereologico:{
+        
+    }
 });
