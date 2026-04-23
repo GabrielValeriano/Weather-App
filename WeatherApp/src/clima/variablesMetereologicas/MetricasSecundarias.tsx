@@ -4,14 +4,13 @@ import { Droplet, Gauge, Wind } from 'lucide-react-native';
 import { styles } from "@/src/clima/estilos/estilosDelIndex";
 import { FaRegCircle } from "react-icons/fa";
 
-// 1. Tipado correcto: son números, no funciones
+
 type Props = {
         Humedad: number;
         PresionAtmosferica: number;
         VelocidadDelViento: number;
 }
 
-// 2. Nombre semántico y claro
 const SeccionDeMetricasClima = ({  Humedad, PresionAtmosferica, VelocidadDelViento }: Props) => {
     return (
         <View style={styles.ContenedorDatosAdicionales}>

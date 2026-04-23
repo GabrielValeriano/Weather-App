@@ -10,7 +10,7 @@ import LayoutPantallaPrincipal from '@/src/clima/PantallaPrincipal/LayoutParaPan
 import Temperatura_MIN_NOWAVG_MAX from '@/src/clima/temperatura/Temperatura_MIN_NOW-AVG_MAX';
 
 export default function PantallaPrincipal() {
-    const { DatosDelPronostico, EstaCargando, Datos, IrAyerMañana } = useAPIpronosticoClima();
+    const { DatosDelPronostico, EstaCargando, Datos, CambiarFecha } = useAPIpronosticoClima();
 
     if (EstaCargando) {
         return (
@@ -26,10 +26,10 @@ export default function PantallaPrincipal() {
                     
                     <NavegacionPorDias
                         FechaActual={DatosDelPronostico.fecha}
-                        FechaAyer={Datos.DiaAnterior}
-                        FechaMañana={Datos.DiaSiguiente}
-                        datos={Datos}
-                        irMañanaAyer={IrAyerMañana}
+                        FechaDeAyer={Datos.DiaAnterior}
+                        FechaDeMañana={Datos.DiaSiguiente}
+                        AlPresionarElDiaAnterior={CambiarFecha}
+                        AlPresionarElDiaSiguiente={CambiarFecha}
                     />
 
                     <TextoCiudad/>
@@ -48,7 +48,7 @@ export default function PantallaPrincipal() {
                         Temperatura_MIN={DatosDelPronostico.tempMin}
                         Temperatura_Actual={DatosDelPronostico.tempActual}
                         Temperatura_MAX={DatosDelPronostico.tempMax}
-                        Datos={Datos.EsHoy}
+                        Datos={Datos.VerificacionDeQueEsHoy}
                     />
 
         </LayoutPantallaPrincipal>

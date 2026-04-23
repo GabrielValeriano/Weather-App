@@ -45,10 +45,10 @@ export function useAPIpronosticoClima() {
         Datos: {
             DiaAnterior: (indiceDia > 0 && DatosDelPronostico[indiceDia - 1]) ? DatosDelPronostico[indiceDia - 1].fecha : "",
             DiaSiguiente: (indiceDia < DatosDelPronostico.length - 1 && DatosDelPronostico[indiceDia + 1]) ? DatosDelPronostico[indiceDia + 1].fecha : "",
-            EsHoy: indiceDia === 1,
+            VerificacionDeQueEsHoy: indiceDia === 1,
             CantidadDias: DatosDelPronostico.length,
             indiceDia
         },
-        IrAyerMañana: {irAlDíaAnterior, irAlDíaSiguiente }
+        CambiarFecha: {irAlDíaAnterior, irAlDíaSiguiente }
     };
 }
