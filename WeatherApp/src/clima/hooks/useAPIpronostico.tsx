@@ -2,9 +2,19 @@ import { useState, useEffect } from 'react';
 import { DiaClima } from '../tipos/Clima';
 
 export function useAPIpronosticoClima() {
-    const [DatosDelPronostico, setPronostico] = useState<DiaClima[]>([]);
-    const [indiceDia, setIndiceDia] = useState(1);
-    const [cargando, setCargando] = useState(true);
+    // REEMPLAZO: Inicializamos con un día "en blanco" para evitar undefined
+    const [DatosDelPronostico, setPronostico] = useState<DiaClima[]>([{
+        fecha: '--/--',
+        tempMin: 0,
+        tempMax: 0,
+        tempActual: 0,
+        humedad: 0,
+        presion: 0,
+        viento: 0,
+        weatherCode: 0
+    }]);
+    
+    const [indiceDia, setIndiceDia] = useState(0); // Empezamos en 0 porque el array inicial tiene 1 solo elemento
 
     const fetchWeatherData = async () => {
         try {
@@ -26,11 +36,11 @@ export function useAPIpronosticoClima() {
                     weatherCode: esHoy ? data.current.weather_code : data.daily.weather_code[index],
                 };
             });
+            
             setPronostico(diasMapeados);
+            setIndiceDia(1); // Una vez que cargan los 3 días de la API, saltamos al día de "Hoy"
         } catch (error) {
             console.error("Error fetching weather:", error);
-        } finally {
-            setCargando(false);
         }
     };
 
@@ -41,7 +51,7 @@ export function useAPIpronosticoClima() {
 
     return { 
         DatosDelPronostico: DatosDelPronostico[indiceDia], 
-        EstaCargando: cargando || DatosDelPronostico.length === 0,
+        // Ya no devolvemos EstaCargando
         Datos: {
             DiaAnterior: (indiceDia > 0 && DatosDelPronostico[indiceDia - 1]) ? DatosDelPronostico[indiceDia - 1].fecha : "",
             DiaSiguiente: (indiceDia < DatosDelPronostico.length - 1 && DatosDelPronostico[indiceDia + 1]) ? DatosDelPronostico[indiceDia + 1].fecha : "",
@@ -52,3 +62,4 @@ export function useAPIpronosticoClima() {
         CambiarFecha: {irAlDíaAnterior, irAlDíaSiguiente }
     };
 }
+

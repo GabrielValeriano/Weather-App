@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react-native';
-
 import HomeScreen, { CustomText } from '@/example/example';
 
 describe('<HomeScreen />', () => {

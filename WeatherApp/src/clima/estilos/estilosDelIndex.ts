@@ -19,17 +19,27 @@ export const styles = StyleSheet.create({
     ContenedorNavegacion: { 
         flexDirection: "row", 
         width: "100%", 
-        justifyContent: 'space-between', 
-        alignItems: "center" 
+        alignItems: "center",
+        height: "5%", // Altura fija para que sea más estable
+    },
+    columnaIzquierda: {
+        flex: 1,
+        alignItems: 'flex-start',
+    },
+    columnaCentral: {
+        flex: 2, // Más espacio al centro
+        alignItems: 'center',
+    },
+    columnaDerecha: {
+        flex: 1,
+        alignItems: 'flex-end',
     },
     Navegacion: { 
         flexDirection: "row", 
-        alignItems: "center", 
-        width: 60 
+        alignItems: "center",
     },
     textoFechaPrincipal: { 
         fontSize: 25, 
-        opacity: 0.4
     },
     textoNavChico: { 
         fontSize: 20,  

@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 
 const LayoutPantallaPrincipal = ({children}: PropsWithChildren) =>{
     return (
-        <SafeAreaView style={styles.ContenedorDatos}>
+        <SafeAreaView testID="screen-weather" style={styles.ContenedorDatos}>
             {children}
         </SafeAreaView>
     );

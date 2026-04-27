@@ -2,44 +2,42 @@ import React from 'react';
 import { View, Text } from "react-native";
 import { Droplet, Gauge, Wind } from 'lucide-react-native';
 import { styles } from "@/src/clima/estilos/estilosDelIndex";
-import { FaRegCircle } from "react-icons/fa";
-
 
 type Props = {
-        Humedad: number;
-        PresionAtmosferica: number;
-        VelocidadDelViento: number;
+        Humedad: { humedad :number};
+        PresionAtmosferica: { presion :number};
+        VelocidadDelViento: { viento :number};
 }
 
-const SeccionDeMetricasClima = ({  Humedad, PresionAtmosferica, VelocidadDelViento }: Props) => {
+const MetricasSecundarias = ({  Humedad, PresionAtmosferica, VelocidadDelViento }: Props) => {
     return (
         <View style={styles.ContenedorDatosAdicionales}>
 
-            <View style={styles.containerDeDatosMeteorologicos}>
-                <Droplet size={30} color="black" />
+            <View testID="metric-item" style={styles.containerDeDatosMeteorologicos}>
+                <Droplet testID="metric-icon" size={30} color="black" />
                 <View style={styles.contenedorDeValoresMetereologicos}>
-                    <Text style={styles.ValorMetereologico}>
-                        {Humedad}
+                    <Text testID="metric-value" style={styles.ValorMetereologico}>
+                        {Humedad.humedad}
                     </Text>
                     <Text style={styles.MedidaDeValorMetereologico}> %</Text>
                 </View>    
             </View>
 
-            <View style={styles.containerDeDatosMeteorologicos}>
-                <Gauge size={30} color="black" />
+            <View testID="metric-item" style={styles.containerDeDatosMeteorologicos}>
+                <Gauge testID="metric-icon" size={30} color="black" />
                 <View style={styles.contenedorDeValoresMetereologicos}>
-                    <Text style={styles.ValorMetereologico}>
-                    {PresionAtmosferica}
+                    <Text testID="metric-value" style={styles.ValorMetereologico}>
+                    {PresionAtmosferica.presion}
                     </Text>
                     <Text style={styles.MedidaDeValorMetereologico}> hPa</Text>
                 </View>
             </View>
 
-            <View style={styles.containerDeDatosMeteorologicos}>
-                <Wind size={30} color="black" />
+            <View testID="metric-item" style={styles.containerDeDatosMeteorologicos}>
+                <Wind testID="metric-icon" size={30} color="black" />
                 <View style={styles.contenedorDeValoresMetereologicos}>
-                    <Text style={styles.ValorMetereologico}>
-                        {VelocidadDelViento}
+                    <Text testID="metric-value" style={styles.ValorMetereologico}>
+                        {VelocidadDelViento.viento}
                     </Text>
                     <Text style={styles.MedidaDeValorMetereologico}> m/s</Text>
                 </View>
@@ -49,4 +47,4 @@ const SeccionDeMetricasClima = ({  Humedad, PresionAtmosferica, VelocidadDelVien
     );
 };
 
-export default SeccionDeMetricasClima;
+export default MetricasSecundarias;
