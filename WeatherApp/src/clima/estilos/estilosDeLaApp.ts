@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
         height: "100%", 
         paddingHorizontal: 25,
         alignItems: "center", 
-        gap: 20  
+        gap: 18  
     },
     ContenedorNavegacion: { 
         flexDirection: "row", 

@@ -1,4 +1,4 @@
-import { styles } from "@/src/clima/estilos/estilosDelIndex"
+import { styles } from "@/src/clima/estilos/estilosDeLaApp"
 import { View, Text } from "react-native"
 
 const TextoCiudad = () => {

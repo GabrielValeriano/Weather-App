@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from "react-native";
 import { Droplet, Gauge, Wind } from 'lucide-react-native';
-import { styles } from "@/src/clima/estilos/estilosDelIndex";
+import { styles } from "@/src/clima/estilos/estilosDeLaApp";
 
 type Props = {
         Humedad: { humedad :number};

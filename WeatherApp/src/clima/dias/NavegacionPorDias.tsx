@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native"
 import { ChevronLeft, ChevronRight } from "lucide-react-native"
-import { styles } from "@/src/clima/estilos/estilosDelIndex"
+import { styles } from "@/src/clima/estilos/estilosDeLaApp"
 
 type Props ={
     FechaActual: { fecha : any };
@@ -42,7 +42,7 @@ export const NavegacionPorDias = ({ FechaActual, FechaDeAyer, FechaDeMañana, Al
                         style={styles.Navegacion}
                     >
                         <Text style={styles.textoNavChico}>{FechaDeMañana.DiaSiguiente}</Text>
-                        <ChevronRight color="black" />
+                        <ChevronRight color="black" size={20}/>
                     </TouchableOpacity>
                 ) : null}
             </View>

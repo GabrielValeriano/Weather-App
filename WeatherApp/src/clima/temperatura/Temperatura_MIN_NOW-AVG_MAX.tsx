@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { styles } from "../estilos/estilosDelIndex";
+import { styles } from "../estilos/estilosDeLaApp";
 
 type Props ={
     Temperatura_MIN: { tempMin: number },

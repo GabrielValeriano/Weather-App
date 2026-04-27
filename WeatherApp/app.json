@@ -22,7 +22,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.gabrielvaleriano1.WeatherApp"
     },
     "web": {
       "bundler": "metro",
@@ -34,6 +35,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "33427810-cb41-4910-b2d3-1b7cd82bb18e"
+      }
     }
   }
 }

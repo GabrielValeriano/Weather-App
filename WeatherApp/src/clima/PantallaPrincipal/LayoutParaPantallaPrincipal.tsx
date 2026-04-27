@@ -1,4 +1,4 @@
-import { styles } from "@/src/clima/estilos/estilosDelIndex"
+import { styles } from "@/src/clima/estilos/estilosDeLaApp"
 import { PropsWithChildren } from "react";
 import { SafeAreaView } from "react-native-safe-area-context"
 
